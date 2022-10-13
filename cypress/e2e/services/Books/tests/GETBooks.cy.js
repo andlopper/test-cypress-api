@@ -5,9 +5,10 @@ describe('GET Books', () => {
         GETBooks.allBooks().should((response) => {
 
             cy.log(response.status);
-            expect(response.status).to.eq(200);
             cy.log(response.statusText);
             cy.log(response.body);
+            
+            expect(response.status).to.eq(200);
             expect(response.body).to.be.not.null;
 
         })

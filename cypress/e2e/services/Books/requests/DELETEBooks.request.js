@@ -1,10 +1,10 @@
 /// <reference types="cypress" />
 
-function delBooks() {
+function delBooks(id) {
     return cy.request({
 
         method: 'DELETE',
-        url: 'Books',
+        url: `Books/${id}`,
         failOnStatusCode: false,
 
     })
